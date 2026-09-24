@@ -1,0 +1,22 @@
+{
+    "liveServer.settings.port": 5501,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/._*": true,
+        "**/.Spotlight-V100": true,
+        "**/.Trashes": true,
+        "**/.fseventsd": true
+    },
+    "files.watcherExclude": {
+        "**/._*": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/dist/**": true
+    }
+}

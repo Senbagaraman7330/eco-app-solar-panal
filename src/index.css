@@ -1,0 +1,13 @@
+@import "./theme/main.css";
+
+/* Ensure font and smooth rendering */
+body {
+  font-family: var(--font-inter-tight), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base accordion actions */
+.accordion-action {
+  user-select: none;
+}
