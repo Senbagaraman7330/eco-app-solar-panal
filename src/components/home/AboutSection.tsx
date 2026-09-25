@@ -7,7 +7,7 @@ export const AboutSection: React.FC = () => {
     <section className="bg-background-1 pt-5 pb-16 md:pb-20 lg:pt-10 lg:pb-24 xl:pb-28">
       <div className="main-container">
         {/* content */}
-        <div className="flex flex-col justify-between gap-y-8 md:flex-row md:gap-x-8 lg:gap-x-12 xl:gap-x-14">
+        {/* <div className="flex flex-col justify-between gap-y-8 md:flex-row md:gap-x-8 lg:gap-x-12 xl:gap-x-14">
           <div className="space-y-3 lg:max-w-[560px]">
             <div data-block-reveal data-delay="0.1">
               <div className="shadow-4 font-pt-mono inline-flex items-center gap-x-1.5 rounded-sm bg-white px-3 py-1.5 text-xs leading-[150%] font-normal text-black">
@@ -62,108 +62,32 @@ export const AboutSection: React.FC = () => {
               </div>
             </Link>
           </div>
-        </div>
+        </div> */}
 
-        <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:items-start xl:mt-18">
-          <div className="flex h-full flex-col justify-between space-y-8 lg:col-span-4">
-            <figure data-block-reveal data-delay="0.1" className="max-h-[317px] w-full">
-              <img
-                src={asset('/images/img-2.jpg')}
-                alt="Solar and battery installation"
-                className="size-full object-cover"
-              />
-            </figure>
-
-            <div data-block-reveal data-delay="0.2" className="pl-0 md:pl-8 lg:pl-6 xl:pl-8">
-              <h3
-                className="text-it-heading-3 font-inter-tight font-normal text-black"
-                data-counter-trigger
-                data-counter-value="3"
-              >
-                <number-flow data-counter-number></number-flow>+ Years
-              </h3>
-              <p className="text-tagline-2 text-background-4/60 font-inter-tight font-normal">
-                Of Solar Project Experience
-              </p>
-
-              <div className="mt-5 flex -space-x-3">
-                <img
-                  data-avatar-image
-                  data-avatar-delay="0.2"
-                  data-avatar-direction="left"
-                  data-avatar-offset="40"
-                  src="https://i.pravatar.cc/48?img=12"
-                  alt="Client partner"
-                  className="border-background-1 size-12.5 rounded-full border-2 object-cover"
-                />
-                <img
-                  data-avatar-image
-                  data-avatar-delay="0.3"
-                  data-avatar-direction="left"
-                  data-avatar-offset="40"
-                  src="https://i.pravatar.cc/48?img=32"
-                  alt="Client partner"
-                  className="border-background-1 size-12.5 rounded-full border-2 object-cover"
-                />
-                <img
-                  data-avatar-image
-                  data-avatar-delay="0.4"
-                  data-avatar-direction="left"
-                  data-avatar-offset="40"
-                  src="https://i.pravatar.cc/48?img=47"
-                  alt="Client partner"
-                  className="border-background-1 size-12.5 rounded-full border-2 object-cover"
-                />
-                <img
-                  data-avatar-image
-                  data-avatar-delay="0.5"
-                  data-avatar-direction="left"
-                  data-avatar-offset="40"
-                  src="https://i.pravatar.cc/48?img=56"
-                  alt="Client partner"
-                  className="border-background-1 size-12.5 rounded-full border-2 object-cover"
-                />
-                <img
-                  data-avatar-image
-                  data-avatar-delay="0.6"
-                  data-avatar-direction="left"
-                  data-avatar-offset="40"
-                  src="https://i.pravatar.cc/48?img=68"
-                  alt="Client partner"
-                  className="border-background-1 size-12.5 rounded-full border-2 object-cover"
-                />
-              </div>
-            </div>
-          </div>
+        {/* <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8 xl:mt-18">
+          <figure
+            data-block-reveal
+            data-delay="0.1"
+            className="overflow-hidden rounded-2xl h-[340px] sm:h-[400px] lg:h-[460px] w-full"
+          >
+            <img
+              src={asset('/images/img-2.jpg')}
+              alt="Solar and battery installation"
+              className="size-full object-cover"
+            />
+          </figure>
 
           <figure
             data-block-reveal
             data-delay="0.2"
-            className="overflow-hidden rounded-sm max-lg:max-h-[360px] lg:col-span-4"
+            className="overflow-hidden rounded-2xl h-[340px] sm:h-[400px] lg:h-[460px] w-full"
           >
             <img
               src={asset('/images/img-3.jpg')}
               alt="Engineering solar systems"
-              className="aspect-[0.8/1] size-full object-cover"
+              className="size-full object-cover"
             />
           </figure>
-
-          <div
-            data-block-reveal
-            data-delay="0.3"
-            className="bg-background-3 space-y-10.5 self-end p-6 md:p-10.5 lg:col-span-4"
-          >
-            <div className="ns-shape-29 text-[48px]"></div>
-
-            <div className="space-y-1">
-              <h3 className="text-it-heading-5 font-inter-tight font-normal tracking-[-0.48px] text-black">
-                Energy Solutions Built Around Your Business
-              </h3>
-              <p className="text-tagline-2 text-background-4/60 font-inter-tight font-normal">
-                From rooftop solar systems to MW-scale solar plants and advanced battery energy storage solutions, we design, execute and support energy systems built around your power requirements.
-              </p>
-            </div>
-          </div>
         </div>
 
         <div
@@ -213,7 +137,7 @@ export const AboutSection: React.FC = () => {
               Reliable Performance & O&M
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

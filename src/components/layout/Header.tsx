@@ -26,21 +26,31 @@ export const Header: React.FC = () => {
       label: 'Solar Solutions',
       path: '/services',
       children: [
-        { label: 'On-Grid Solar', path: '/services#on-grid' },
-        { label: 'Off-Grid Solar', path: '/services#off-grid' },
-        { label: 'Hybrid Solar', path: '/services#hybrid' },
-        { label: 'BESS / Energy Storage', path: '/services#bess' },
+        { label: 'All Solutions', path: '/services' },
+        { label: 'On-Grid Solar', path: '/on-grid' },
+        { label: 'Off-Grid Solar', path: '/off-grid' },
+        { label: 'Hybrid Solar', path: '/hybrid' },
+        { label: 'BESS / Energy Storage', path: '/bess' },
       ],
     },
+    // { label: 'Projects', path: '/projects' },
     { label: 'Contact Us', path: '/contact' },
   ];
 
   // Check active route
-  const isActive = (path: string) => {
-    if (path === '/') {
+  const isActive = (item: NavItem) => {
+    if (item.path === '/') {
       return location.pathname === '/' || location.pathname === '/index.html';
     }
-    return location.pathname.startsWith(path) || location.pathname === `${path}.html`;
+    if (location.pathname === item.path || location.pathname === `${item.path}.html` || location.pathname.startsWith(`${item.path}/`)) {
+      return true;
+    }
+    if (item.children) {
+      return item.children.some(
+        (child) => location.pathname === child.path || location.pathname === `${child.path}.html`
+      );
+    }
+    return false;
   };
 
   // Close dropdown on click outside
@@ -129,7 +139,7 @@ export const Header: React.FC = () => {
               ></div>
 
               {navItems.map((item) => {
-                const active = isActive(item.path);
+                const active = isActive(item);
                 if (item.children) {
                   return (
                     <li
@@ -141,36 +151,46 @@ export const Header: React.FC = () => {
                       onMouseLeave={() => setIsDropdownOpen(false)}
                       className="group/dropdown text-tagline-2 font-inter-tight text-background-4/60 relative z-30 rounded-lg px-4 py-2 font-normal transition-colors duration-300 ease-in-out hover:text-white data-[active=true]:text-white"
                     >
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setIsDropdownOpen((prev) => !prev);
-                        }}
-                        className="flex items-center gap-1.5 cursor-pointer focus:outline-none"
-                        aria-expanded={isDropdownOpen}
-                        aria-haspopup="true"
-                      >
-                        <span>{item.label}</span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13"
-                          height="13"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-white' : ''}`}
+                      <div className="flex items-center gap-1.5 cursor-pointer">
+                        <Link
+                          to={item.path}
+                          onClick={() => setIsDropdownOpen(false)}
+                          className="hover:text-inherit focus:outline-none"
                         >
-                          <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                      </button>
+                          {item.label}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setIsDropdownOpen((prev) => !prev);
+                          }}
+                          className="p-0.5 cursor-pointer focus:outline-none"
+                          aria-expanded={isDropdownOpen}
+                          aria-haspopup="true"
+                          aria-label="Toggle submenu"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13"
+                            height="13"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-white' : ''}`}
+                          >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </button>
+                      </div>
 
                       {/* Dropdown Card */}
                       <div
-                        className={`absolute top-full left-1/2 -translate-x-1/2 pt-3.5 transition-all duration-200 ease-out z-999 w-max min-w-[230px] ${
+                        className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ease-out z-999 w-max min-w-[240px] ${
                           isDropdownOpen
                             ? 'opacity-100 visible translate-y-0 pointer-events-auto'
                             : 'opacity-0 invisible translate-y-2 pointer-events-none'
@@ -247,7 +267,7 @@ export const Header: React.FC = () => {
               </button>
 
               <Link to="/contact">
-                <button className="group/subscribe btn-primary font-inter-tight text-tagline-2 flex h-10 w-full items-center justify-center gap-x-1 rounded-xl bg-[#323A44] px-4 py-2 font-normal text-white">
+                <button className="group/subscribe btn-primary font-inter-tight text-tagline-2 flex h-10 w-full items-center justify-center gap-x-1 rounded-xl bg-[#323A44] px-4 py-2 font-normal text-white cursor-pointer">
                   <span>Get Assessment</span>
                   <span className="icon-slide-track">
                     <svg
@@ -460,7 +480,7 @@ export const Header: React.FC = () => {
                   <input
                     type="search"
                     data-search-input
-                    placeholder="Search..."
+                    placeholder="Search solar solutions, BESS, projects..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="bg-background-1/40 text-background-1 placeholder:text-background-1/40 w-full rounded-xl border border-white/10 px-12 py-3 transition-all duration-300 focus:border-white/20 focus:outline-none"

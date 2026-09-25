@@ -15,11 +15,37 @@ const revealContentWithoutAnimations = () => {
 };
 
 export const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (hash) {
+      const targetId = hash.replace('#', '');
+      const scrollToElement = () => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          const headerOffset = 100;
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+          return true;
+        }
+        return false;
+      };
 
+      // Try immediately, then after DOM rendering / animations
+      if (!scrollToElement()) {
+        const timeout = setTimeout(scrollToElement, 250);
+        return () => clearTimeout(timeout);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
+  useEffect(() => {
     let isCancelled = false;
     const initializeAnimations = async () => {
       try {

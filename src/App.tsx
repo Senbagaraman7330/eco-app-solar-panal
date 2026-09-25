@@ -9,6 +9,10 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailsPage from './pages/ServiceDetailsPage';
+import OnGridPage from './pages/OnGridPage';
+import OffGridPage from './pages/OffGridPage';
+import HybridPage from './pages/HybridPage';
+import BessPage from './pages/BessPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import BlogPage from './pages/BlogPage';
@@ -39,6 +43,18 @@ export const App: React.FC = () => {
 
             <Route path="/service-details" element={<ServiceDetailsPage />} />
             <Route path="/service-details.html" element={<ServiceDetailsPage />} />
+
+            <Route path="/on-grid" element={<OnGridPage />} />
+            <Route path="/on-grid.html" element={<OnGridPage />} />
+
+            <Route path="/off-grid" element={<OffGridPage />} />
+            <Route path="/off-grid.html" element={<OffGridPage />} />
+
+            <Route path="/hybrid" element={<HybridPage />} />
+            <Route path="/hybrid.html" element={<HybridPage />} />
+
+            <Route path="/bess" element={<BessPage />} />
+            <Route path="/bess.html" element={<BessPage />} />
 
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects.html" element={<ProjectsPage />} />

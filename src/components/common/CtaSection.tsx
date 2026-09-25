@@ -15,10 +15,10 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
   buttonLink = '/contact',
 }) => {
   return (
-    <section className="bg-background-1 overflow-hidden pt-8 pb-16 md:pt-10 md:pb-20 lg:pt-12 lg:pb-24 xl:pb-30">
+    <section className="bg-background-1 overflow-hidden pt-6 pb-12 md:pt-8 md:pb-16 lg:pt-10 lg:pb-20">
       <div className="main-container">
-        <div className="bg-background-3 mx-auto flex flex-col items-center justify-between gap-10 rounded-4xl px-8 text-center md:px-14 lg:flex-row lg:text-left xl:py-30 py-12">
-          <div className="space-y-4 lg:max-w-[560px]">
+        <div className="bg-background-3 mx-auto flex flex-col items-center justify-between gap-6 rounded-3xl p-6 text-center sm:p-8 md:p-10 lg:flex-row lg:px-12 lg:py-10 lg:text-left xl:px-14 xl:py-12">
+          <div className="space-y-3 lg:max-w-[560px]">
             <h2
               data-text-reveal
               data-reveal-delay="0.1"
@@ -35,7 +35,7 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
             </p>
           </div>
 
-          <div data-block-reveal data-delay="0.3" className="shrink-0 lg:self-end">
+          <div data-block-reveal data-delay="0.3" className="shrink-0 lg:self-center">
             <Link to={buttonLink}>
               <div className="group/button before:bg-light-green after:bg-background-4 text-tagline-2 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-black backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:transition-all before:duration-500 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-500 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1">
                 <div className="relative z-4 overflow-hidden whitespace-nowrap">

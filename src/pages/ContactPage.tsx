@@ -3,10 +3,15 @@ import { asset } from '../lib/asset';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
+    name: '',
+    company: '',
     phone: '',
     email: '',
-    topic: '',
+    location: '',
+    load: '',
+    consumption: '',
+    solarRequirement: '',
+    bessRequirement: '',
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,10 +22,15 @@ export const ContactPage: React.FC = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        fullName: '',
+        name: '',
+        company: '',
         phone: '',
         email: '',
-        topic: '',
+        location: '',
+        load: '',
+        consumption: '',
+        solarRequirement: '',
+        bessRequirement: '',
         message: '',
       });
     }, 4000);
@@ -36,14 +46,14 @@ export const ContactPage: React.FC = () => {
               <div className="shadow-4 font-pt-mono inline-flex items-center gap-x-1.5 rounded-sm bg-white px-3 py-1.5 text-xs leading-[150%] font-normal text-black">
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clipPath="url(#clip0_1629_31646)">
+                    <g clipPath="url(#clip0_1629_31646_cnt)">
                       <path
                         d="M14 2V3.33333C14 9.75133 10.418 12.6667 6 12.6667H3.49533C3.38667 13.2747 3.33333 13.938 3.33333 14.6667H2C2 13.758 2.07733 12.9333 2.23067 12.1787C2.07733 11.316 2 10.1453 2 8.66667C2 4.98467 4.98467 2 8.66667 2C10 2 11.3333 2.66667 14 2ZM8.66667 3.33333C5.72133 3.33333 3.33333 5.72133 3.33333 8.66667C3.33333 8.908 3.33533 9.14067 3.34 9.364C4.176 8.04533 5.40067 7.00333 7.00267 6.088L7.664 7.24533C5.76067 8.33333 4.498 9.56933 3.85067 11.3333H6C10.01 11.3333 12.5807 8.68467 12.6647 3.592C11.75 3.68067 10.9 3.624 9.85133 3.46667C9.08467 3.35133 8.934 3.33333 8.66667 3.33333Z"
                         fill="black"
                       />
                     </g>
                     <defs>
-                      <clipPath id="clip0_1629_31646">
+                      <clipPath id="clip0_1629_31646_cnt">
                         <rect width="16" height="16" fill="white" />
                       </clipPath>
                     </defs>
@@ -56,17 +66,17 @@ export const ContactPage: React.FC = () => {
             <h1
               data-text-reveal
               data-reveal-delay="0.2"
-              className="font-inter-tight text-it-heading-4 md:text-it-heading-3 xl:text-it-heading-2 mt-4 mb-5 font-normal text-black"
+              className="font-inter-tight text-it-heading-3 md:text-it-heading-2 xl:text-it-heading-1 mt-4 mb-5 font-normal text-black"
             >
-              Let&apos;s talk recovery.
+              Let&apos;s Design Your Energy Solution.
             </h1>
 
             <p
               data-text-reveal
               data-reveal-delay="0.3"
-              className="text-tagline-1 text-background-4/60 font-inter-tight mx-auto max-w-[640px] font-normal"
+              className="text-tagline-2 text-background-4/60 font-inter-tight mx-auto max-w-[640px] font-normal"
             >
-              Whether you&apos;re looking to streamline waste operations, explore circular economy partnerships, or learn how our recovery technology can transform your business — we&apos;re here to help.
+              Whether you&apos;re planning a new solar installation, expanding an existing system, or implementing battery energy storage, our technical team will help engineer the right solution.
             </p>
           </div>
         </div>
@@ -78,19 +88,19 @@ export const ContactPage: React.FC = () => {
           <div className="grid grid-cols-1 items-start gap-y-10 md:gap-y-14 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-19">
             {/* Left: Heading + Form */}
             <div className="space-y-8 md:space-y-12">
-              <div>
+              {/* <div>
                 <div className="mb-5" data-block-reveal data-delay="0.2">
                   <div className="shadow-4 font-pt-mono inline-flex items-center gap-x-1.5 rounded-sm bg-white px-3 py-1.5 text-xs leading-[150%] font-normal text-black">
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <g clipPath="url(#clip0_1629_31646)">
+                        <g clipPath="url(#clip0_1629_31646_gi)">
                           <path
                             d="M14 2V3.33333C14 9.75133 10.418 12.6667 6 12.6667H3.49533C3.38667 13.2747 3.33333 13.938 3.33333 14.6667H2C2 13.758 2.07733 12.9333 2.23067 12.1787C2.07733 11.316 2 10.1453 2 8.66667C2 4.98467 4.98467 2 8.66667 2C10 2 11.3333 2.66667 14 2ZM8.66667 3.33333C5.72133 3.33333 3.33333 5.72133 3.33333 8.66667C3.33333 8.908 3.33533 9.14067 3.34 9.364C4.176 8.04533 5.40067 7.00333 7.00267 6.088L7.664 7.24533C5.76067 8.33333 4.498 9.56933 3.85067 11.3333H6C10.01 11.3333 12.5807 8.68467 12.6647 3.592C11.75 3.68067 10.9 3.624 9.85133 3.46667C9.08467 3.35133 8.934 3.33333 8.66667 3.33333Z"
                             fill="black"
                           />
                         </g>
                         <defs>
-                          <clipPath id="clip0_1629_31646">
+                          <clipPath id="clip0_1629_31646_gi">
                             <rect width="16" height="16" fill="white" />
                           </clipPath>
                         </defs>
@@ -105,7 +115,7 @@ export const ContactPage: React.FC = () => {
                   data-reveal-delay="0.2"
                   className="font-inter-tight text-it-heading-4 md:text-it-heading-3 xl:text-it-heading-2 font-normal text-black"
                 >
-                  Ready to close the loop on waste?
+                  Ready to power your facility with clean solar?
                 </h2>
 
                 <p
@@ -113,9 +123,9 @@ export const ContactPage: React.FC = () => {
                   data-reveal-delay="0.3"
                   className="text-tagline-2 text-background-4/60 font-inter-tight mt-3 max-w-[460px] font-normal"
                 >
-                  Tell us about your project and our team will get back to you within 24 hours with a tailored recovery plan.
+                  Tell us about your connected load and energy requirements. Our technical team will get back to you within 24 hours with a custom engineering plan.
                 </p>
-              </div>
+              </div> */}
 
               <div data-block-reveal data-delay="0.3" className="rounded-4xl bg-white px-8 py-10 sm:px-10.5 sm:py-14 shadow-sm border border-black/5">
                 {isSubmitted ? (
@@ -125,45 +135,29 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <h3 className="text-it-heading-5 font-normal text-black">Thank you!</h3>
                     <p className="text-tagline-2 text-background-4/60">
-                      Your message has been received. A recovery specialist will contact you within 24 hours.
+                      Your inquiry has been received. A solar technical engineer will contact you within 24 hours.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
-                        <label
-                          htmlFor="scrapx-full-name"
-                          className="font-inter-tight text-tagline-1 inline-block font-normal text-black"
-                        >
-                          Full name
-                        </label>
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Full Name</label>
                         <input
-                          type="text"
-                          name="fullName"
-                          id="scrapx-full-name"
-                          required
-                          value={formData.fullName}
-                          onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                          placeholder="Your full name"
+                          type="text" required
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          placeholder="Your Name"
                           className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
                         />
                       </div>
-
                       <div className="space-y-2">
-                        <label
-                          htmlFor="scrapx-phone"
-                          className="font-inter-tight text-tagline-1 inline-block font-normal text-black"
-                        >
-                          Phone
-                        </label>
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Company / Facility Name</label>
                         <input
-                          type="tel"
-                          name="phone"
-                          id="scrapx-phone"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+1 (234) 567-890"
+                          type="text" required
+                          value={formData.company}
+                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                          placeholder="Company Name"
                           className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
                         />
                       </div>
@@ -171,71 +165,112 @@ export const ContactPage: React.FC = () => {
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
-                        <label
-                          htmlFor="scrapx-email"
-                          className="font-inter-tight text-tagline-1 inline-block font-normal text-black"
-                        >
-                          Email address
-                        </label>
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Contact Phone Number</label>
                         <input
-                          type="email"
-                          name="email"
-                          id="scrapx-email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="you@company.com"
+                          type="tel" required
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          placeholder="+91 98765 43210"
                           className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
                         />
                       </div>
-
                       <div className="space-y-2">
-                        <label
-                          htmlFor="scrapx-topic"
-                          className="font-inter-tight text-tagline-1 inline-block font-normal text-black"
-                        >
-                          What&apos;s on your mind?
-                        </label>
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Business Email Address</label>
+                        <input
+                          type="email" required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          placeholder="name@company.com"
+                          className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      <div className="space-y-2">
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Project Location (City, State)</label>
+                        <input
+                          type="text" required
+                          value={formData.location}
+                          onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                          placeholder="City, State"
+                          className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Sanctioned Connected Load</label>
+                        <input
+                          type="text"
+                          value={formData.load}
+                          onChange={(e) => setFormData({ ...formData, load: e.target.value })}
+                          placeholder="e.g. 250 kW / 500 kVA"
+                          className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      <div className="space-y-2">
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Monthly Consumption (Units / kWh)</label>
+                        <input
+                          type="text"
+                          value={formData.consumption}
+                          onChange={(e) => setFormData({ ...formData, consumption: e.target.value })}
+                          placeholder="e.g. 45,000 kWh / Month"
+                          className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Solar Requirement</label>
                         <div className="group relative">
                           <select
-                            name="topic"
-                            id="scrapx-topic"
-                            value={formData.topic}
-                            onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                            value={formData.solarRequirement}
+                            onChange={(e) => setFormData({ ...formData, solarRequirement: e.target.value })}
                             className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full appearance-none rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
                           >
-                            <option value="" disabled>Select an option</option>
-                            <option value="consultation">Free consultation</option>
-                            <option value="donation">Donation inquiry</option>
-                            <option value="partnership">Partnership</option>
-                            <option value="other">Other</option>
+                            <option value="" disabled>Select Requirement</option>
+                            <option value="On-Grid Solar">On-Grid Solar</option>
+                            <option value="Off-Grid Solar">Off-Grid Solar</option>
+                            <option value="Hybrid Solar">Hybrid Solar</option>
+                            <option value="MW Ground Mount Solar">MW Ground Mount Solar</option>
+                            <option value="Exploring Options">Exploring Options</option>
                           </select>
-                          <span
-                            className="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 transition-transform duration-300 group-focus-within:rotate-180"
-                            aria-hidden="true"
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="text-background-4 size-5" viewBox="0 0 24 24" fill="none">
-                              <path d="M6 9L12 15L18 9" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                          <span className="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 transition-transform duration-300 group-focus-within:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="text-background-4 size-5" viewBox="0 0 24 24" fill="none"><path d="M6 9L12 15L18 9" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </div>
                       </div>
                     </div>
+                    
+                    <div className="space-y-2">
+                      <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">BESS / Storage Requirement</label>
+                      <div className="group relative">
+                        <select
+                          value={formData.bessRequirement}
+                          onChange={(e) => setFormData({ ...formData, bessRequirement: e.target.value })}
+                          className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 h-12 w-full appearance-none rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
+                        >
+                          <option value="" disabled>Select BESS Option</option>
+                          <option value="Peak Shaving & Tariff Arbitrage">Peak Shaving &amp; Tariff Arbitrage</option>
+                          <option value="Diesel Generator (DG) Offset">Diesel Generator (DG) Offset</option>
+                          <option value="Critical UPS Emergency Backup">Critical UPS Emergency Backup</option>
+                          <option value="Microgrid Power Balancing">Microgrid Power Balancing</option>
+                          <option value="No BESS Needed">No BESS Needed</option>
+                          <option value="Need Technical Recommendation">Need Technical Recommendation</option>
+                        </select>
+                        <span className="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 transition-transform duration-300 group-focus-within:rotate-180">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="text-background-4 size-5" viewBox="0 0 24 24" fill="none"><path d="M6 9L12 15L18 9" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                        </span>
+                      </div>
+                    </div>
 
                     <div className="space-y-2">
-                      <label
-                        htmlFor="scrapx-message"
-                        className="font-inter-tight text-tagline-1 inline-block font-normal text-black"
-                      >
-                        Tell us about your project
-                      </label>
+                      <label className="font-inter-tight text-tagline-1 inline-block font-normal text-black">Project Details / Available Rooftop Area</label>
                       <textarea
-                        name="message"
-                        id="scrapx-message"
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Describe your waste recovery goals..."
+                        placeholder="Tell us about your rooftop area (sq. ft.), power tariffs, or specific operational requirements..."
                         className="text-tagline-2 font-inter-tight bg-background-1 text-background-4 placeholder:text-background-4/60 min-h-[120px] w-full resize-none rounded-lg px-5 py-3 font-normal focus:ring-2 focus:ring-[#B4E50D] focus:outline-none"
                       ></textarea>
                     </div>
@@ -247,12 +282,12 @@ export const ContactPage: React.FC = () => {
                       >
                         <div className="relative z-4 overflow-hidden whitespace-nowrap">
                           <span className="ease-button relative inline-block transition-all duration-400 [text-shadow:0_-2em_0_currentColor] group-hover/button:translate-y-[2em] group-hover/button:text-black">
-                            Send message
+                            Request a Consultation
                           </span>
                         </div>
                       </button>
 
-                      <p className="font-inter-tight text-tagline-3 text-background-4/60 max-w-[220px] font-normal sm:text-right">
+                      <p className="font-inter-tight text-tagline-3 text-background-4/60 max-w-[240px] font-normal sm:text-right">
                         Clicking Submit means you agree to our Terms of Service.
                       </p>
                     </div>
@@ -266,7 +301,7 @@ export const ContactPage: React.FC = () => {
               <figure data-block-reveal data-delay="0.2" className="h-[320px] overflow-hidden rounded-4xl md:h-[420px] lg:h-[480px]">
                 <img
                   src={asset('/images/img-19.jpg')}
-                  alt="Waste recovery facility operations"
+                  alt="Solar engineering team on site"
                   className="size-full object-cover object-center"
                 />
               </figure>
@@ -286,11 +321,11 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div className="space-y-1 pt-0.5">
                     <p className="font-inter-tight text-it-heading-6 font-normal text-black">Email Us</p>
-                    <a href="mailto:hello@ecoapps.com" className="text-tagline-2 text-background-4/60 hover:text-background-4 block font-normal transition-colors">
-                      hello@ecoapps.com
+                    <a href="mailto:info@ecoapps.in" className="text-tagline-2 text-background-4/60 hover:text-background-4 block font-normal transition-colors">
+                      info@ecoapps.in
                     </a>
-                    <a href="mailto:support@ecoapps.com" className="text-tagline-2 text-background-4/60 hover:text-background-4 block font-normal transition-colors">
-                      support@ecoapps.com
+                    <a href="mailto:support@ecoapps.in" className="text-tagline-2 text-background-4/60 hover:text-background-4 block font-normal transition-colors">
+                      support@ecoapps.in
                     </a>
                   </div>
                 </div>
@@ -310,10 +345,10 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div className="space-y-1 pt-0.5">
                     <p className="font-inter-tight text-it-heading-6 font-normal text-black">Direct Line</p>
-                    <a href="tel:18005550199" className="text-tagline-2 text-background-4/60 hover:text-background-4 block font-normal transition-colors">
-                      1-800-555-0199
+                    <a href="tel:+919876543210" className="text-tagline-2 text-background-4/60 hover:text-background-4 block font-normal transition-colors">
+                      +91 98765 43210
                     </a>
-                    <p className="text-tagline-2 text-background-4/60 font-normal">24/7 Emergency Support Available</p>
+                    <p className="text-tagline-2 text-background-4/60 font-normal">24/7 Operations &amp; Maintenance Support</p>
                   </div>
                 </div>
 
@@ -330,9 +365,9 @@ export const ContactPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="space-y-1 pt-0.5">
-                    <p className="font-inter-tight text-it-heading-6 font-normal text-black">Office Location</p>
+                    <p className="font-inter-tight text-it-heading-6 font-normal text-black">Headquarters</p>
                     <p className="text-tagline-2 text-background-4/60 font-normal">
-                      1234 Recovery Way, Suite 100<br />Austin, TX 78701
+                      Eco Apps Solutions Pvt. Ltd.<br />India
                     </p>
                   </div>
                 </div>

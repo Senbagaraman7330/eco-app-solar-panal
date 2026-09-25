@@ -9,100 +9,103 @@ export const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      iconClass: 'ns-shape-1',
-      title: 'Commercial & industrial',
-      desc: 'Scalable collection and on-site compaction for factories, warehouses, and retail hubs.',
-      features: ['Custom waste stream mapping', 'On-site compaction systems', 'Real-time diversion tracking'],
-      delay: '0.1',
-    },
-    {
+      id: 'on-grid',
+      path: '/on-grid',
       iconClass: 'ns-shape-2',
-      title: 'Construction & demo',
-      desc: 'Fast roll-off containers, debris sorting, and recovery plans built for active sites.',
-      features: ['Roll-off container delivery', 'Debris sorting & recovery', 'Job-site scheduling'],
-      delay: '0.2',
-    },
-    {
-      iconClass: 'ns-shape-3',
-      title: 'Electronic & tech waste',
-      desc: 'Secure device recovery with responsible recycling paths for modern electronics.',
-      features: ['Certified data destruction', 'Component harvesting', 'Battery recycling'],
-      delay: '0.3',
-    },
-    {
-      iconClass: 'ns-shape-4',
-      title: 'Municipal & residential',
-      desc: 'Dependable curbside collection, recycling education, and city-scale recovery programs.',
-      features: ['Curbside collection', 'Recycling education', 'City-scale programs'],
+      title: 'On-Grid Solar Systems',
+      desc: 'Connect your solar PV installation directly to the utility grid to power connected loads and export surplus energy for net metering savings.',
+      features: ['Net metering synchronization', 'High-efficiency Tier 1 panels', 'Maximized utility bill savings', 'Fast ROI & low maintenance'],
       delay: '0.1',
       colSpan: 'lg:col-span-6',
     },
     {
-      iconClass: 'ns-shape-5',
-      title: 'Organic & food waste',
-      desc: 'Composting systems and anaerobic digestion for organic waste streams at any scale.',
-      features: ['Composting infrastructure', 'Anaerobic digestion', 'Soil amendment output'],
+      id: 'off-grid',
+      path: '/off-grid',
+      iconClass: 'ns-shape-3',
+      title: 'Off-Grid Solar Systems',
+      desc: 'Operate completely independent of the electricity grid by pairing robust solar generation with high-capacity battery storage banks.',
+      features: ['Dedicated LFP battery bank', 'Industrial stand-alone inverters', 'Automated diesel generator integration', '24/7 power in remote locations'],
       delay: '0.2',
+      colSpan: 'lg:col-span-6',
+    },
+    {
+      id: 'hybrid',
+      path: '/hybrid',
+      iconClass: 'ns-shape-4',
+      title: 'Hybrid Solar Systems',
+      desc: 'Combine solar generation, battery energy storage, and grid power into one intelligent ecosystem for flexibility and uninterrupted backup.',
+      features: ['Smart grid/battery load shifting', 'Instant UPS backup transition (<10ms)', 'Peak demand charge reduction', 'Nighttime solar self-consumption'],
+      delay: '0.3',
+      colSpan: 'lg:col-span-6',
+    },
+    {
+      id: 'bess',
+      path: '/bess',
+      iconClass: 'ns-shape-5',
+      title: 'Battery Energy Storage (BESS)',
+      desc: 'Utility and industrial-grade battery systems engineered for peak shaving, demand management, tariff arbitrage, and microgrid resilience.',
+      features: ['Tier-1 LFP chemistry safety', 'Intelligent Energy Management (EMS)', 'Cell-level BMS monitoring', 'Automated peak shaving & arbitrage'],
+      delay: '0.4',
       colSpan: 'lg:col-span-6',
     },
   ];
 
   const whyChooseUs = [
-    { icon: 'ns-shape-7', title: 'AI-powered sorting', desc: 'Optical sorting systems that identify and separate materials 10x faster than manual methods.', delay: '0.1' },
-    { icon: 'ns-shape-8', title: 'IoT bin monitoring', desc: 'Real-time fill-level sensors that optimize pickup routes and prevent overflow.', delay: '0.2' },
-    { icon: 'ns-shape-9', title: 'Chemical recycling', desc: 'Advanced processes that convert hard-to-recycle plastics into high-grade reusable materials.', delay: '0.3' },
-    { icon: 'ns-shape-10', title: 'Client dashboard', desc: 'Real-time reporting on diversion rates, carbon offsets, and cost savings.', delay: '0.4' },
-    { icon: 'ns-shape-11', title: 'Fleet management', desc: 'Carbon-neutral logistics with optimized routing for maximum efficiency.', delay: '0.1' },
-    { icon: 'ns-shape-12', title: 'Compliance reporting', desc: 'Automated documentation for environmental regulations and ESG audits.', delay: '0.2' },
-    { icon: 'ns-shape-13', title: 'Zero-waste consulting', desc: 'Strategic planning to eliminate waste streams and maximize resource recovery.', delay: '0.3' },
-    { icon: 'ns-shape-14', title: 'Circular economy', desc: 'End-to-end systems that close the loop on material lifecycles.', delay: '0.4' },
+    { icon: 'ns-shape-7', title: 'Tier 1 Equipment', desc: 'Sourcing only high-efficiency mono-PERC/TOPCon modules and industrial PCS inverters.', delay: '0.1' },
+    { icon: 'ns-shape-8', title: 'Smart Telemetry', desc: 'Real-time string and cell-level monitoring for proactive fault identification.', delay: '0.2' },
+    { icon: 'ns-shape-9', title: 'Turnkey EPC', desc: 'End-to-end engineering, permitting, CEIG approvals, procurement, and execution.', delay: '0.3' },
+    { icon: 'ns-shape-10', title: 'Client Analytics', desc: 'Live cloud telemetry on generation yield, PR ratio, carbon offsets, and energy savings.', delay: '0.4' },
+    { icon: 'ns-shape-11', title: 'Fast-Track Execution', desc: 'Streamlined project management ensuring on-time commissioning with zero delays.', delay: '0.1' },
+    { icon: 'ns-shape-12', title: 'Regulatory Compliance', desc: 'Complete liaisoning for DISCOM net-metering sanctions and grid synchronizations.', delay: '0.2' },
+    { icon: 'ns-shape-13', title: 'Energy Audits', desc: 'Detailed load profiling and thermal audits to size optimal solar & BESS configurations.', delay: '0.3' },
+    { icon: 'ns-shape-14', title: 'Lifecycle O&M', desc: 'Preventative maintenance, module cleaning schedules, and performance ratio guarantees.', delay: '0.4' },
   ];
 
   const portfolio = [
     {
       img: asset('/images/img-5.jpg'),
-      title: 'Zero-Waste industrial network',
-      desc: 'A comprehensive industrial recovery system that diverts 99% of waste from landfill through AI-powered sorting and smart logistics.',
-      tags: ['Industrial Recovery', 'AI Sorting', 'Zero-Waste'],
+      title: 'MW-Scale Industrial Solar Plant',
+      desc: 'A comprehensive rooftop & ground-mount solar installation for a major manufacturing plant, delivering 1.8 MWp with synchronized net-metering.',
+      tags: ['Industrial Rooftop', 'On-Grid', 'MW-Scale'],
       delay: '0.1',
     },
     {
       img: asset('/images/img-8.jpg'),
-      title: 'Metro logistics recovery hub',
-      desc: 'An integrated waste management system for a major logistics center, featuring real-time monitoring and automated material separation.',
-      tags: ['Logistics', 'Smart Monitoring', 'Automation'],
+      title: 'Commercial Hybrid Solar & BESS Hub',
+      desc: 'An integrated 500 kWp solar PV system coupled with a 1 MWh BESS container for peak shaving and emergency power reliability.',
+      tags: ['Commercial', 'Hybrid System', '1 MWh BESS'],
       delay: '0.2',
     },
     {
       img: asset('/images/img-10.jpg'),
-      title: 'Smart city organics loop',
-      desc: 'A city-wide organic waste collection and composting program serving 84+ neighborhoods with weekly pickup and community education.',
-      tags: ['Municipal', 'Organics', 'Community'],
+      title: 'Remote Agricultural Off-Grid Microgrid',
+      desc: 'A stand-alone 250 kW solar microgrid with lithium energy storage powering high-volume irrigation pumps and cold storage units.',
+      tags: ['Agriculture', 'Off-Grid', 'LFP Storage'],
       delay: '0.3',
     },
     {
       img: asset('/images/img-11.jpg'),
-      title: 'Circular tech refurbishment',
-      desc: 'E-waste recovery and refurbishment lab that processes electronics into reusable components and certified recycled materials.',
-      tags: ['E-Waste', 'Refurbishment', 'Certified Recycling'],
+      title: 'Healthcare Campus Solar & Backup Ecosystem',
+      desc: 'A critical-load solar installation engineered with zero-break UPS transition, keeping intensive care and diagnostic equipment fully powered 24/7.',
+      tags: ['Hospital', 'Critical Backup', 'Solar EPC'],
       delay: '0.4',
     },
   ];
 
   const testimonials = [
     {
-      quote: 'Our waste diversion went from 40% to 97% within the first quarter. The dashboard gives our leadership team clear proof of where materials are going.',
+      quote: 'Eco Apps Solutions installed our 1.2 MW rooftop solar system on schedule. Our monthly electricity expenditure dropped by 65% in the first quarter of commissioning.',
       name: 'Sarah Jenkins',
-      role: 'Operations Director',
+      role: 'Operations Director, Precision Engineering',
       img: asset('/images/img-20.png'),
       logo: asset('/images/icons/asana-with-black-text.svg'),
       videoUrl: 'https://www.youtube.com/embed/LuKAeNC8e3c?si=dNprxE8hkadUeDvf',
       delay: '0.1',
     },
     {
-      quote: 'The rollout was smooth, the reporting was easy for every department to understand, and our costs dropped significantly in the first month.',
+      quote: 'The BESS and hybrid solar setup has completely eliminated our diesel generator usage during peak tariff hours. Outstanding engineering and support team.',
       name: 'Marcus Chen',
-      role: 'Facilities Manager',
+      role: 'Facilities Head, Apex Logistics Hub',
       img: asset('/images/img-21.png'),
       logo: asset('/images/icons/asana-with-black-text.svg'),
       videoUrl: 'https://www.youtube.com/embed/LuKAeNC8e3c?si=dNprxE8hkadUeDvf',
@@ -112,67 +115,70 @@ export const ServicesPage: React.FC = () => {
 
   return (
     <main className="bg-background-1">
-      {/* Services Hero Section */}
-      <section className="bg-background-1 pt-35 pb-20 md:pt-36 md:pb-24 lg:pt-40 lg:pb-20 xl:pt-48 xl:pb-39">
-        <div className="main-container">
-          <div className="mx-auto max-w-[920px] text-center">
+      {/* Services Hero Section with Premium Background Image & Smoky Glass Card */}
+      <section className="relative overflow-hidden bg-[#05101E] pt-32 pb-20 md:pt-36 md:pb-24 lg:pt-44 lg:pb-32 xl:pt-48 xl:pb-36">
+        {/* Background Image Container with Gradient Overlays */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img
+            src={asset('/images/img-1.jpg')}
+            alt="Solar EPC & Energy Solutions"
+            className="size-full object-cover object-center scale-105 opacity-70 transition-transform duration-1000"
+          />
+          <div className="absolute inset-0 hero-smoky-bg" />
+          <div className="absolute -top-32 -left-32 size-96 rounded-full hero-glow-accent-1 blur-[120px] pointer-events-none" />
+          <div className="absolute -bottom-32 -right-32 size-96 rounded-full hero-glow-accent-2 blur-[140px] pointer-events-none" />
+        </div>
+
+        <div className="main-container relative z-1">
+          {/* Smoky Glassmorphic Card Container for Hero Text */}
+          <div className="hero-glass-card mx-auto max-w-[920px] rounded-3xl p-8 sm:p-10 md:p-14 lg:p-16 space-y-6 text-center">
             <div data-block-reveal data-delay="0.1" className="inline-block">
-              <div className="shadow-4 font-pt-mono inline-flex items-center gap-x-1.5 rounded-sm bg-white px-3 py-1.5 text-xs leading-[150%] font-normal text-black">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <g clipPath="url(#clip0_1629_31646_svs)">
-                      <path
-                        d="M14 2V3.33333C14 9.75133 10.418 12.6667 6 12.6667H3.49533C3.38667 13.2747 3.33333 13.938 3.33333 14.6667H2C2 13.758 2.07733 12.9333 2.23067 12.1787C2.07733 11.316 2 10.1453 2 8.66667C2 4.98467 4.98467 2 8.66667 2C10 2 11.3333 2.66667 14 2ZM8.66667 3.33333C5.72133 3.33333 3.33333 5.72133 3.33333 8.66667C3.33333 8.908 3.33533 9.14067 3.34 9.364C4.176 8.04533 5.40067 7.00333 7.00267 6.088L7.664 7.24533C5.76067 8.33333 4.498 9.56933 3.85067 11.3333H6C10.01 11.3333 12.5807 8.68467 12.6647 3.592C11.75 3.68067 10.9 3.624 9.85133 3.46667C9.08467 3.35133 8.934 3.33333 8.66667 3.33333Z"
-                        fill="black"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1629_31646_svs">
-                        <rect width="16" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-                <span> Services</span>
+              <div className="hero-badge-glass shadow-4 font-pt-mono inline-flex items-center gap-x-2 rounded-full px-4 py-1.5 text-xs leading-[150%] font-normal">
+                <span className="size-2 rounded-full bg-[#B4E50D] animate-pulse"></span>
+                <span>End-to-End Solar EPC Solutions</span>
               </div>
             </div>
 
             <h1
               data-text-reveal
               data-reveal-delay="0.2"
-              className="font-inter-tight text-it-heading-2 xl:text-it-heading-1 mt-5 font-normal text-black"
+              className="font-inter-tight text-it-heading-2 md:text-it-heading-1 xl:text-[56px] xl:leading-[1.12] font-semibold text-white tracking-[-0.03em] drop-shadow-md"
+              style={{ color: '#ffffff' }}
             >
-              Tailored recovery for every industry.
+              End-to-End Solar EPC Solutions
             </h1>
 
             <p
               data-text-reveal
               data-reveal-delay="0.3"
-              className="text-tagline-3 text-background-4/60 font-inter-tight md:text-tagline-2 mx-auto mt-2 font-normal md:mt-4"
+              className="text-tagline-2 md:text-tagline-1 text-white font-inter-tight max-w-[760px] font-normal mx-auto leading-relaxed drop-shadow"
+              style={{ color: 'rgba(255, 255, 255, 0.95)' }}
             >
-              We deliver tech-driven recovery systems designed to handle diverse waste environments, maximizing value, efficiency, and environmental impact.
+              From Concept to Commissioning — We Engineer the Complete Solar Project.
+              <br className="hidden md:block" />
+              Our EPC approach covers the complete project lifecycle, allowing customers to work with a single technical partner from project development through long-term operations and maintenance.
             </p>
 
             <div
               data-block-reveal
               data-delay="0.5"
-              className="mt-10 flex flex-wrap items-center justify-center gap-2 md:mt-14"
+              className="pt-2 flex flex-wrap items-center justify-center gap-4"
             >
-              <Link to="/projects" className="contents">
-                <div className="group/button max-md:mx-auto max-md:flex! max-md:w-[80%] before:bg-light-green after:bg-background-4 text-tagline-2 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-black backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:transition-all before:duration-500 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-500 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1">
+              <Link to="/contact" className="contents">
+                <div className="group/button max-md:mx-auto max-md:flex! max-md:w-[80%] before:bg-light-green after:bg-background-4 text-tagline-2 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-black backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:transition-all before:duration-500 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-500 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1 cursor-pointer">
                   <div className="relative z-4 overflow-hidden whitespace-nowrap">
                     <span className="ease-button relative inline-block transition-all duration-300 [text-shadow:0_-2em_0_currentColor] group-hover/button:translate-y-[2em] group-hover/button:text-white">
-                      Explore our projects
+                      Start your EPC project
                     </span>
                   </div>
                 </div>
               </Link>
 
               <Link to="/contact" className="contents">
-                <div className="group/button max-md:mx-auto max-md:flex! max-md:w-[80%] after:bg-light-green text-tagline-2 shadow-7 hover:shadow-1 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-white backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:bg-(image:--color-gradient-1) before:transition-all before:duration-600 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-600 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1">
+                <div className="group/button max-md:mx-auto max-md:flex! max-md:w-[80%] after:bg-light-green text-tagline-2 shadow-7 hover:shadow-1 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-white backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:bg-(image:--color-gradient-1) before:transition-all before:duration-600 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-600 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1 cursor-pointer">
                   <div className="relative z-4 overflow-hidden whitespace-nowrap">
-                    <span className="ease-button relative inline-block transition-all duration-400 [text-shadow:0_-2em_0_currentColor] group-hover/button:translate-y-[2em] group-hover/button:text-black">
-                      Request waste audit
+                    <span className="ease-button relative inline-block transition-all duration-300 [text-shadow:0_-2em_0_currentColor] group-hover/button:translate-y-[2em] group-hover/button:text-black">
+                      Request site assessment
                     </span>
                   </div>
                 </div>
@@ -182,8 +188,8 @@ export const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Grid Section */}
-      <section className="bg-background-1 overflow-hidden pb-14 md:pb-18 lg:pb-23 xl:pb-28">
+      {/* Services Grid Section - 4 Core Services */}
+      <section className="bg-background-1 overflow-hidden py-16 md:py-20 lg:py-24 xl:py-28">
         <div className="main-container space-y-12 md:space-y-14 lg:space-y-18">
           <div className="max-w-[640px] space-y-3">
             <div data-block-reveal data-delay="0.1" className="inline-block">
@@ -203,7 +209,7 @@ export const ServicesPage: React.FC = () => {
                     </defs>
                   </svg>
                 </span>
-                <span> What We Do</span>
+                <span> Core Offerings</span>
               </div>
             </div>
 
@@ -212,7 +218,7 @@ export const ServicesPage: React.FC = () => {
               data-reveal-delay="0.2"
               className="font-inter-tight text-it-heading-4 md:text-it-heading-3 lg:text-it-heading-2 mt-2 font-normal text-black"
             >
-              Comprehensive waste recovery solutions.
+              Our 4 Solar &amp; Storage Systems
             </h2>
 
             <p
@@ -220,49 +226,51 @@ export const ServicesPage: React.FC = () => {
               data-reveal-delay="0.3"
               className="text-tagline-3 text-background-4/60 font-inter-tight md:text-tagline-2 font-normal"
             >
-              From industrial collection to smart sorting and reporting, we cover every step of the
-              recovery lifecycle with precision and accountability.
+              Choose the right system architecture tailored for your operational model, grid reliability, and economic targets.
             </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-3">
+          <div className="grid grid-cols-12 gap-6">
             {services.map((s, idx) => (
               <div
                 key={idx}
+                id={s.id}
                 data-block-reveal
                 data-delay={s.delay}
-                className={`col-span-12 sm:col-span-6 ${s.colSpan || 'lg:col-span-4'} ease-3 bg-background-2/5 overflow-hidden rounded-4xl p-8 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-sm md:p-10 lg:p-14`}
+                className={`col-span-12 ${s.colSpan} flex flex-col justify-between ease-3 bg-background-2/5 overflow-hidden rounded-4xl p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-md md:p-10 lg:p-12 border border-black/5`}
               >
-                <div className="shadow-6 mb-6 flex h-21 w-15 items-center justify-center rounded-full bg-black px-3 py-6">
-                  <span className={`${s.iconClass} text-[28px] text-white`}></span>
-                </div>
-                <div className="mb-5 space-y-0.5">
-                  <h3 className="text-it-heading-5 font-normal text-black">{s.title}</h3>
-                  <p className="text-tagline-2 text-background-4/60 font-normal">{s.desc}</p>
-                </div>
-
-                <ul className="mb-9 space-y-2">
-                  {s.features.map((feat, fidx) => (
-                    <li key={fidx} className="text-tagline-2 text-background-4/80 flex items-center gap-2 font-normal">
-                      <span className="bg-background-4 flex size-5 items-center justify-center rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" className="stroke-background-1 size-3.5">
-                          <path d="M10.125 3.37549L4.875 8.62525L2.25 6.00049" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link to="/service-details" className="contents">
-                  <div className="group/button before:bg-light-green after:bg-background-4 text-tagline-2 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-black backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:transition-all before:duration-500 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-500 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1">
-                    <div className="relative z-4 overflow-hidden whitespace-nowrap">
-                      <span className="ease-button relative inline-block transition-all duration-300 [text-shadow:0_-2em_0_currentColor] group-hover/button:translate-y-[2em] group-hover/button:text-white">
-                        Learn more
-                      </span>
-                    </div>
+                <div>
+                  <div className="shadow-6 mb-6 flex h-20 w-15 items-center justify-center rounded-2xl bg-black px-3 py-4">
+                    <span className={`${s.iconClass} text-[28px] text-white`}></span>
                   </div>
-                </Link>
+                  <div className="mb-4 space-y-1.5">
+                    <h3 className="text-it-heading-4 font-normal text-black">{s.title}</h3>
+                    <p className="text-tagline-2 text-background-4/70 font-normal leading-relaxed">{s.desc}</p>
+                  </div>
+
+                  <ul className="mb-8 space-y-2.5">
+                    {s.features.map((feat, fidx) => (
+                      <li key={fidx} className="text-tagline-2 text-background-4/80 flex items-center gap-2.5 font-normal">
+                        <span className="bg-[#B4E50D]/20 text-[#323A44] flex size-5 shrink-0 items-center justify-center rounded-full font-bold text-xs">
+                          ✓
+                        </span>
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <Link to={s.path} className="contents">
+                    <div className="group/button mt-3 before:bg-light-green after:bg-background-4 text-tagline-2 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-6 py-3 font-normal text-black backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:transition-all before:duration-500 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-500 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1">
+                      <div className="relative z-4 overflow-hidden whitespace-nowrap">
+                        <span className="ease-button relative inline-block transition-all duration-300 [text-shadow:0_-2em_0_currentColor] group-hover/button:translate-y-[2em] group-hover/button:text-white">
+                          Explore {s.title}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -270,7 +278,7 @@ export const ServicesPage: React.FC = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-background-1 overflow-hidden pb-14 md:pb-18 lg:pb-23 xl:pb-28">
+      {/* <section className="bg-background-1 overflow-hidden pb-14 md:pb-18 lg:pb-23 xl:pb-28">
         <div className="main-container space-y-12 md:space-y-14 lg:space-y-18">
           <div className="flex flex-col justify-between gap-y-8 md:flex-row md:items-end md:gap-x-8 lg:gap-x-12 xl:gap-x-14">
             <div className="space-y-3 lg:max-w-[640px]">
@@ -300,7 +308,7 @@ export const ServicesPage: React.FC = () => {
                 data-reveal-delay="0.2"
                 className="font-inter-tight text-it-heading-4 md:text-it-heading-3 lg:text-it-heading-2 mt-2 font-normal tracking-[-0.04em] text-black"
               >
-                The science of structural excellence.
+                Engineering before equipment.
               </h2>
 
               <p
@@ -308,8 +316,7 @@ export const ServicesPage: React.FC = () => {
                 data-reveal-delay="0.3"
                 className="text-tagline-3 text-background-4/60 md:text-tagline-2 font-inter-tight font-normal"
               >
-                From tier-1 equipment to in-house installation and long-term monitoring, we provide a
-                complete framework for building a resilient and efficient recovery system.
+                From Tier-1 mono-PERC/TOPCon modules to dedicated in-house engineering and 24/7 telemetry, we deliver turnkey systems built for decades of peak kWh yield.
               </p>
             </div>
 
@@ -343,10 +350,10 @@ export const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Portfolio Section */}
-      <section className="bg-background-1 overflow-hidden py-16 md:py-20 lg:py-24 xl:py-30">
+      {/* <section className="bg-background-1 overflow-hidden py-16 md:py-20 lg:py-24 xl:py-30">
         <div className="main-container space-y-12 md:space-y-14 lg:space-y-18">
           <div className="max-w-[640px] space-y-3">
             <div data-block-reveal data-delay="0.1" className="inline-block">
@@ -375,7 +382,7 @@ export const ServicesPage: React.FC = () => {
               data-reveal-delay="0.2"
               className="font-inter-tight text-it-heading-4 md:text-it-heading-3 lg:text-it-heading-2 mt-2 font-normal text-black"
             >
-              Recovery projects that deliver results.
+              Solar installations that deliver peak ROI.
             </h2>
 
             <p
@@ -383,8 +390,7 @@ export const ServicesPage: React.FC = () => {
               data-reveal-delay="0.3"
               className="text-tagline-3 text-background-4/60 font-inter-tight md:text-tagline-2 font-normal"
             >
-              From large-scale logistics hubs to smart city ecosystems, our portfolio reflects how
-              advanced recovery systems turn waste into value at scale.
+              From MW-scale manufacturing rooftops to commercial BESS storage hubs, our track record represents proven renewable power at scale.
             </p>
           </div>
 
@@ -421,10 +427,10 @@ export const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Clients / Testimonials Section */}
-      <section className="bg-background-1 overflow-hidden py-16 md:py-20 lg:py-24 xl:py-30">
+      {/* <section className="bg-background-1 overflow-hidden py-16 md:py-20 lg:py-24 xl:py-30">
         <div className="main-container space-y-12 md:space-y-14 lg:space-y-18">
           <div className="mx-auto max-w-[640px] space-y-3 text-center">
             <div data-block-reveal data-delay="0.1" className="inline-block">
@@ -453,7 +459,7 @@ export const ServicesPage: React.FC = () => {
               data-reveal-delay="0.2"
               className="font-inter-tight text-it-heading-4 md:text-it-heading-3 lg:text-it-heading-2 mt-2 font-normal text-black"
             >
-              Trusted by sustainability leaders.
+              Trusted by industry and commercial leaders.
             </h2>
 
             <p
@@ -461,8 +467,7 @@ export const ServicesPage: React.FC = () => {
               data-reveal-delay="0.3"
               className="text-tagline-3 text-background-4/60 font-inter-tight md:text-tagline-2 font-normal"
             >
-              Our solutions deliver real results, proven through the voices of those driving
-              sustainability forward.
+              Our clean energy systems deliver verifiable kilowatt-hour yields and sustained utility cost reductions.
             </p>
           </div>
 
@@ -519,7 +524,7 @@ export const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CtaSection />
     </main>

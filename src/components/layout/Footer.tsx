@@ -30,22 +30,22 @@ export const Footer: React.FC = () => {
                 <p className="font-inter-tight text-tagline-2 font-normal text-white">Solar Solutions</p>
                 <ul className="space-y-2">
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <Link className="footer-link transition-colors hover:text-white" to="/services#on-grid">
+                    <Link className="footer-link transition-colors hover:text-white" to="/on-grid">
                       On-Grid Solar
                     </Link>
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <Link className="footer-link transition-colors hover:text-white" to="/services#off-grid">
+                    <Link className="footer-link transition-colors hover:text-white" to="/off-grid">
                       Off-Grid Solar
                     </Link>
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <Link className="footer-link transition-colors hover:text-white" to="/services#hybrid">
+                    <Link className="footer-link transition-colors hover:text-white" to="/hybrid">
                       Hybrid Solar
                     </Link>
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <Link className="footer-link transition-colors hover:text-white" to="/services#bess">
+                    <Link className="footer-link transition-colors hover:text-white" to="/bess">
                       BESS / Energy Storage
                     </Link>
                   </li>
@@ -67,9 +67,14 @@ export const Footer: React.FC = () => {
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
                     <Link className="footer-link transition-colors hover:text-white" to="/services">
-                      Solar Solutions
+                      All Solutions
                     </Link>
                   </li>
+                  {/* <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
+                    <Link className="footer-link transition-colors hover:text-white" to="/projects">
+                      Projects
+                    </Link>
+                  </li> */}
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
                     <Link className="footer-link transition-colors hover:text-white" to="/contact">
                       Contact Us
@@ -82,19 +87,19 @@ export const Footer: React.FC = () => {
                 <p className="font-inter-tight text-tagline-2 font-normal text-white">Contact Us</p>
                 <ul className="space-y-2">
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <span>1234 Recovery Way, Suite 100</span>
+                    <span>Corporate Office</span>
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <span>Austin, TX 78701</span>
+                    <span>India</span>
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <a className="footer-link transition-colors hover:text-white" href="tel:8005550199">
-                      (800) 555-0199
+                    <a className="footer-link transition-colors hover:text-white" href="tel:+919876543210">
+                      +91 98765 43210
                     </a>
                   </li>
                   <li className="font-inter-tight text-tagline-2 font-normal text-white/60">
-                    <a className="footer-link transition-colors hover:text-white" href="mailto:contact@ecoapps.com">
-                      contact@ecoapps.com
+                    <a className="footer-link transition-colors hover:text-white" href="mailto:info@ecoapps.in">
+                      info@ecoapps.in
                     </a>
                   </li>
                 </ul>
@@ -107,7 +112,7 @@ export const Footer: React.FC = () => {
               data-footer-title
               className="font-inter-tight footer-title text-center text-[50px] leading-[1.1] font-normal tracking-[0.8rem] select-none min-[420px]:text-[60px] sm:text-[100px] md:text-[130px] lg:tracking-[2.2rem] xl:text-[14vw] 2xl:text-[clamp(4.5rem,16vw,18rem)] transition-all duration-300 hover:tracking-[2.5rem]"
             >
-              Eco Apps
+              Eco Apps Solution
             </h2>
 
             <div className="flex flex-col items-start justify-between gap-5 border-t border-white/10 pt-6 md:flex-row md:items-center">

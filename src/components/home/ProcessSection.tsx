@@ -103,28 +103,20 @@ export const ProcessSection: React.FC = () => {
       </div>
 
       {/* process steps */}
-      <div className="space-y-10" data-process-slider data-block-reveal data-delay="0.4">
+      <div className="space-y-8 md:space-y-10" data-process-slider data-block-reveal data-delay="0.4">
         <div className="scroll-bar overflow-hidden" data-process-viewport>
           <div className="flex gap-6 pl-[12%] will-change-transform" data-process-track>
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-background-3 grid min-h-[336px] w-full min-w-[340px] grid-cols-[80px_1fr] overflow-hidden sm:min-w-[420px] lg:min-w-[440px] xl:min-w-[582px]"
+                className="bg-background-3 grid min-h-[260px] sm:min-h-[270px] lg:min-h-[280px] w-full min-w-[340px] grid-cols-[70px_1fr] overflow-hidden sm:min-w-[400px] lg:min-w-[450px] xl:min-w-[500px]"
               >
-                <div className="flex flex-col items-center justify-between border-r-2 border-white px-8 py-10.5">
-                  <span className="font-inter-tight text-tagline-2 font-medium text-black">{step.num}</span>
-                  <div className="flex flex-col gap-1" aria-hidden="true">
-                    <span className="bg-background-4/30 block size-1.5 rounded-full"></span>
-                    <span className="bg-background-4/30 block size-1.5 rounded-full"></span>
-                    <span className="bg-background-4/30 block size-1.5 rounded-full"></span>
-                    <span className="bg-background-4 block size-1.5 rounded-full"></span>
-                  </div>
-                </div>
 
-                <div className="flex flex-col justify-between p-7 sm:p-10.5">
+
+                <div className="flex flex-col justify-between p-6 sm:p-8">
                   <h3 className="text-it-heading-5 font-inter-tight font-normal text-black">{step.title}</h3>
 
-                  <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-center">
+                  <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
                     <p className="text-tagline-2 text-background-4/60 font-inter-tight max-w-[300px] font-normal">
                       {step.desc}
                     </p>
