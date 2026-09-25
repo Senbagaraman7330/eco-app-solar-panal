@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
-import AboutSection from '../components/home/AboutSection';
+// import AboutSection from '../components/home/AboutSection';
 import ImpactSection from '../components/home/ImpactSection';
 import ServicesSection from '../components/home/ServicesSection';
 // import FeaturesSection from '../components/home/FeaturesSection';
@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
   return (
     <main className="bg-white">
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <ImpactSection />
       <ServicesSection />
       {/* <FeaturesSection /> */}

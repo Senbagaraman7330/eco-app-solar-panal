@@ -63,7 +63,7 @@ export const ServicesSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="space-y-6 p-2">
+        <div className="space-y-6 ">
           {/* services list */}
           <div
             data-services-tabs
@@ -84,10 +84,10 @@ export const ServicesSection: React.FC = () => {
               data-alt="Solar EPC Solution"
               type="button"
               aria-pressed="true"
-              className="relative z-2 flex flex-col justify-between gap-y-4 text-left cursor-pointer"
+              className="relative z-2 flex min-h-[130px] md:min-h-[145px] xl:min-h-[160px] flex-col justify-between gap-y-4 p-5 md:p-7 xl:p-8 text-left cursor-pointer"
             >
-              <span className="tab-number text-tagline-3 font-pt-mono font-normal text-black">/001</span>
-              <span className="tab-title text-tagline-1 sm:text-it-heading-5 font-normal text-black">
+              <span className="text-tagline-3 font-pt-mono font-normal text-black">/001</span>
+              <span className="text-tagline-1 sm:text-it-heading-5 font-normal text-black">
                 Solar EPC
               </span>
             </button>
@@ -100,10 +100,10 @@ export const ServicesSection: React.FC = () => {
               data-image={asset('/images/img-9.jpg')}
               data-alt="On-Grid Solar Solution"
               aria-pressed="false"
-              className="relative z-2 flex flex-col justify-between gap-y-4 text-left cursor-pointer"
+              className="relative z-2 flex min-h-[130px] md:min-h-[145px] xl:min-h-[160px] flex-col justify-between gap-y-4 p-5 md:p-7 xl:p-8 text-left cursor-pointer"
             >
-              <span className="tab-number text-tagline-3 font-pt-mono font-normal text-black">/002</span>
-              <span className="tab-title text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
+              <span className="text-tagline-3 font-pt-mono font-normal text-black">/002</span>
+              <span className="text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
                 On-Grid Solar
               </span>
             </button>
@@ -116,10 +116,10 @@ export const ServicesSection: React.FC = () => {
               data-image={asset('/images/img-7.jpg')}
               data-alt="Off-Grid Solar Solution"
               aria-pressed="false"
-              className="relative z-2 flex flex-col justify-between gap-y-4 text-left cursor-pointer"
+              className="relative z-2 flex min-h-[130px] md:min-h-[145px] xl:min-h-[160px] flex-col justify-between gap-y-4 p-5 md:p-7 xl:p-8 text-left cursor-pointer"
             >
-              <span className="tab-number text-tagline-3 font-pt-mono font-normal text-black">/003</span>
-              <span className="tab-title text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
+              <span className="text-tagline-3 font-pt-mono font-normal text-black">/003</span>
+              <span className="text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
                 Off-Grid Solar
               </span>
             </button>
@@ -132,10 +132,10 @@ export const ServicesSection: React.FC = () => {
               data-alt="Hybrid Solar Solution"
               type="button"
               aria-pressed="false"
-              className="relative z-2 flex flex-col justify-between gap-y-4 text-left cursor-pointer"
+              className="relative z-2 flex min-h-[130px] md:min-h-[145px] xl:min-h-[160px] flex-col justify-between gap-y-4 p-5 md:p-7 xl:p-8 text-left cursor-pointer"
             >
-              <span className="tab-number text-tagline-3 font-pt-mono font-normal text-black">/004</span>
-              <span className="tab-title text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
+              <span className="text-tagline-3 font-pt-mono font-normal text-black">/004</span>
+              <span className="text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
                 Hybrid Solar
               </span>
             </button>
@@ -148,10 +148,10 @@ export const ServicesSection: React.FC = () => {
               data-alt="BESS Energy Storage Solution"
               type="button"
               aria-pressed="false"
-              className="relative z-2 flex flex-col justify-between gap-y-4 text-left cursor-pointer"
+              className="relative z-2 flex min-h-[130px] md:min-h-[145px] xl:min-h-[160px] flex-col justify-between gap-y-4 p-5 md:p-7 xl:p-8 text-left cursor-pointer"
             >
-              <span className="tab-number text-tagline-3 font-pt-mono font-normal text-black">/005</span>
-              <span className="tab-title text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
+              <span className="text-tagline-3 font-pt-mono font-normal text-black">/005</span>
+              <span className="text-tagline-1 sm:text-it-heading-5 text-background-4/60 font-normal">
                 BESS Storage
               </span>
             </button>
@@ -161,12 +161,12 @@ export const ServicesSection: React.FC = () => {
           <div
             data-block-reveal
             data-delay="0.3"
-            className="grid min-h-[480px] md:h-[520px] 2xl:h-[616px] grid-cols-12 gap-3"
+            className="grid h-[520px] grid-cols-12 gap-3 2xl:h-[616px]"
           >
             <div
-              className="bg-background-3 services-content-box col-span-12 flex flex-col justify-between max-md:order-2 md:col-span-5 lg:col-span-4"
+              className="bg-background-3 col-span-12 flex min-h-[250px] flex-col justify-between p-8 max-md:order-2 md:col-span-5 md:min-h-[320px] md:p-10.5 lg:col-span-4"
             >
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <h3
                   data-services-list-title
                   data-text-reveal
@@ -179,16 +179,16 @@ export const ServicesSection: React.FC = () => {
                   data-services-list-description
                   data-text-reveal
                   data-reveal-delay="0"
-                  className="text-tagline-2 text-background-4/60 font-normal leading-relaxed"
+                  className="text-tagline-2 text-background-4/60 font-normal"
                 >
                   From engineering and procurement to installation, commissioning and O&amp;M, we manage your solar project from concept to completion.
                 </p>
               </div>
 
-              <div className="pt-6 md:pt-8" data-services-list-button>
-                <Link to="/services" className="inline-block">
+              <div className="md:mt-10" data-services-list-button>
+                <Link to="/services" className="contents">
                   <div
-                    className="group/button after:bg-light-green text-tagline-2 shadow-7 hover:shadow-1 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-6 py-3 font-normal text-white backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:bg-(image:--color-gradient-1) before:transition-all before:duration-600 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-600 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1"
+                    className="group/button after:bg-light-green text-tagline-2 shadow-7 hover:shadow-1 before:ease-button after:ease-button relative z-3 inline-flex items-center justify-center overflow-hidden rounded px-5.5 py-3 font-normal text-white backdrop-blur-[20px] before:absolute before:inset-0 before:z-1 before:origin-[50%_90%] before:rounded before:bg-(image:--color-gradient-1) before:transition-all before:duration-600 before:content-[''] after:absolute after:inset-0 after:z-2 after:translate-y-full after:rounded after:transition-all after:duration-600 after:content-[''] hover:before:scale-88 hover:after:translate-y-0 active:scale-1"
                   >
                     <div className="relative z-4 overflow-hidden whitespace-nowrap">
                       <span
@@ -203,7 +203,7 @@ export const ServicesSection: React.FC = () => {
             </div>
 
             <figure
-              className="relative col-span-12 overflow-hidden rounded-md max-md:order-1 md:col-span-7 lg:col-span-8"
+              className="relative col-span-12 overflow-hidden max-md:order-1 md:col-span-7 lg:col-span-8"
               data-services-list-image
             >
               <img
