@@ -64,7 +64,7 @@ export const AboutSection: React.FC = () => {
           </div>
         </div> */}
 
-        {/* <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8 xl:mt-18">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8 xl:mt-18">
           <figure
             data-block-reveal
             data-delay="0.1"
@@ -137,7 +137,7 @@ export const AboutSection: React.FC = () => {
               Reliable Performance & O&M
             </p>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
