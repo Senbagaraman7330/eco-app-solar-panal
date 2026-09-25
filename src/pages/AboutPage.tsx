@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { asset } from '../lib/asset';
-import AboutSection from '../components/home/AboutSection';
 import TeamSection from '../components/home/TeamSection';
 import ClientsSection from '../components/common/ClientsSection';
 import FaqSection from '../components/home/FaqSection';
@@ -220,7 +219,6 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* <AboutSection /> */}
       <TeamSection />
       <ClientsSection />
       <FaqSection />
